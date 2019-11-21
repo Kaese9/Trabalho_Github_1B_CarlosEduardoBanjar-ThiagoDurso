@@ -67,12 +67,50 @@ void substituirPalavras(string palavra1, string palavra2, string texto)
 
 
 int main(){
-
+    char letra, letrasub, letraasub;
+    string texto, palavra, palavrasub, palavraasub;
+    int escolha, qtd;
 	cout << "Entre com o texto para fazer o teste:";
-
-
-
-
+	getline (cin, texto);
+	cout<< "1- Contar letras";
+	cout<< "\n2- Substituir letras";
+	cout<< "\n3- Contar palavras";
+	cout<< "\n4- Substituir palavras";
+    cout<< "\nEscolha:";
+	cin>> escolha;
+	if (escolha==1)
+    {
+        cout<< "Entre com a letra a ser contada:";
+        cin>> letra;
+        qtd=contaLetras(letra, texto);
+        cout<< "Quantidade:"<<qtd;
+    }
+    else
+        if(escolha==2)
+        {
+            cout<< "Entre com a letra a ser substituida:";
+            cin>> letrasub;
+            cout<< "Entre com a letra a substituir:";
+            cin>> letraasub;
+            substituirLetra (letrasub, letraasub, texto);
+        }
+        else
+            if(escolha==3)
+            {
+                cout<< "Entre com a palavra a ser contada:";
+                cin>> palavra;
+                qtd=contaPalavras(palavra, texto);
+                cout<< "Quantidade:"<<qtd;
+            }
+            else
+            {
+                cout<< "Entre com a palavra a ser substituida:";
+                cin>> palavrasub;
+                cout<< "Entre com a palavra a substituir:";
+                cin>> palavraasub;
+                substituirPalavras (palavrasub, palavraasub, texto);
+            }
 	return 0;
 }
+
 
