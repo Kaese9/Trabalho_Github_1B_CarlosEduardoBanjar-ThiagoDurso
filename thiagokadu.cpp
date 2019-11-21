@@ -53,7 +53,18 @@ int contaPalavras(string palavra, string texto)
 */
 void substituirPalavras(string palavra1, string palavra2, string texto)
 {
+    int pos, qtd;
+    qtd=palavra1.length();
+    pos = texto.find (palavra1, 0);
+    while(pos!=-1)
+    {
+        texto.replace (pos, qtd, palavra2);
+        pos=texto.find (palavra1, pos+1);
+    }
+    cout<< texto;
+
 }
+
 
 int main(){
 
