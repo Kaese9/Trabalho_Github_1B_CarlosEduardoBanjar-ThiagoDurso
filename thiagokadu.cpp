@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string>
+using namespace std;
+
 
 
 /*
@@ -6,6 +9,15 @@
 */
 int contaLetras(char letra, string texto)
 {
+    int qtd, iguais, cont;
+    iguais=0;
+    qtd=texto.length();
+    for(cont=0; cont<qtd; cont++)
+    {
+        if(texto[cont]==letra)
+            iguais++;
+    }
+    return iguais;
 }
 
 /*
@@ -21,11 +33,6 @@ void substituirLetra(char letra1,char letra2, string texto)
 int contaPalavras(string palavra, string texto)
 {
 }
-<<<<<<< HEAD
-Oi
-=======
-
->>>>>>> cf0f06280964f02ab4733ebdd7b600c6162abb3f
 /*
 	Substitui todas as ocorrencias de 'palavra1' por 'palavra2' em 'texto'
 */
