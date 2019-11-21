@@ -37,7 +37,17 @@ void substituirLetra(char letra1,char letra2, string texto)
 */
 int contaPalavras(string palavra, string texto)
 {
+    int qtd, pos;
+    qtd=0;
+    pos=texto.find (palavra, 0);
+    while(pos!=-1)
+    {
+        qtd++;
+        pos=texto.find (palavra, pos+1);
+    }
+    return qtd;
 }
+
 /*
 	Substitui todas as ocorrencias de 'palavra1' por 'palavra2' em 'texto'
 */
