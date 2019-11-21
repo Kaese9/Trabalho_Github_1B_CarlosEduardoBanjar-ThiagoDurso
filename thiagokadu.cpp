@@ -4,9 +4,8 @@ using namespace std;
 
 
 
-/*
-	Conta todas as letras 'letra' contidas em 'texto'
-*/
+
+
 int contaLetras(char letra, string texto)
 {
     int qtd, iguais, cont;
@@ -20,11 +19,17 @@ int contaLetras(char letra, string texto)
     return iguais;
 }
 
-/*
-	Substitui todas as ocorrencias de 'letra1' por 'letra2' contidas em 'texto'
-*/
+
 void substituirLetra(char letra1,char letra2, string texto)
 {
+    int qtd, cont;
+    qtd=texto.length();
+    for(cont=0; cont<qtd; cont++)
+    {
+        if(texto[cont]==letra1)
+            texto[cont]=letra2;
+    }
+    cout<<texto;
 }
 
 /*
