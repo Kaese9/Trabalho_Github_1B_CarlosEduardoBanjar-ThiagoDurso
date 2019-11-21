@@ -21,7 +21,7 @@ void substituirLetra(char letra1,char letra2, string texto)
 int contaPalavras(string palavra, string texto)
 {
 }
-
+Oi
 /*
 	Substitui todas as ocorrencias de 'palavra1' por 'palavra2' em 'texto'
 */
